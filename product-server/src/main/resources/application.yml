@@ -1,0 +1,23 @@
+server:
+      port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+      application:
+              name: product-microservice
+      cloud:
+          config:
+            discovery:
+              enabled: true
+              service-id: CONFIG
+            profile: test
+      #数据库配置
+      datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: 1073562933
+        url: jdbc:mysql://127.0.0.1:3306/mbc_mall?characterEncoding=utf-8&useSSL=false
+      jpa:
+        show-sql: true
